@@ -1,0 +1,28 @@
+﻿@model Practice6april.Models.ProfilePic
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<h4>ProfilePic</h4>
+
+
+<hr />
+<div class="text-center">
+    <form enctype="multipart/form-data" method="post" asp-action="UploadFile">
+        <dl>
+            <dt>
+                <label asp-for="@Model.FormFile"></label>
+            </dt>
+            <dd>
+                <input asp-for="@Model.FormFile" type="file" />
+            </dd>
+        </dl>
+        <input type="submit" value="Upload" class="btn btn-primary">
+    </form>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
